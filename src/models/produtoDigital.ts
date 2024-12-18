@@ -1,5 +1,6 @@
-class ProdutoDigital extends Produto {
-    private tamanhoArquivo: string; // Exemplo: "1GB"
+import { Produto } from "./produto";
+export class produtoDigital extends Produto {
+    private tamanhoArquivo: string; 
 
     constructor(id: number, nome: string, preco: number, tamanhoArquivo: string) {
         super(id, nome, preco);

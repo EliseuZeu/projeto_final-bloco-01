@@ -1,4 +1,4 @@
-abstract class Produto {
+export abstract class Produto {
     constructor(
         protected id: number,
         protected nome: string,
