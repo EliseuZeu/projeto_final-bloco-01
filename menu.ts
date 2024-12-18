@@ -2,7 +2,7 @@ import { ProdutoController } from "./src/controllers/produtoController";
 import { produtoDigital } from "./src/models/produtoDigital";
 import readlinesync = require("readline-sync");
 
-export class CloudShopMenu {
+export class menu {
     private controller: ProdutoController = new ProdutoController();
 
     public exibirMenu(): void {
@@ -174,8 +174,8 @@ export class CloudShopMenu {
 
 // Função principal que inicializa o menu
 export function main() {
-    const menu = new CloudShopMenu();
-    menu.exibirMenu();
+    const menus = new menu();
+    menus.exibirMenu();
 }
 
 // Chamada da função principal
