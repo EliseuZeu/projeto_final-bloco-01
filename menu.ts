@@ -1,4 +1,4 @@
-import * as readline from "readline-sync";
+import readlinesync = require("readline-sync");
 
 
 export default class Menu {
@@ -26,7 +26,7 @@ export default class Menu {
             console.log('                                                     ');
 
             console.log('Escolha uma opção:');
-            opcao = readline.questionInt('');
+            opcao = readlinesync.questionInt('');
 
             if (opcao === 6) {
                 console.log(
@@ -78,6 +78,6 @@ export default class Menu {
     private keyPress(): void {
         console.log('');
         console.log('\nPressione Enter para continuar...');
-        readline.prompt();
+        readlinesync.prompt();
     }
 }
