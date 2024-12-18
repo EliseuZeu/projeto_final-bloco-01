@@ -1,9 +1,6 @@
 import readlinesync = require("readline-sync");
 
-
-export default class Menu {
-
-
+class CloudShopMenu {
     public exibirMenu(): void {
         let opcao: number;
 
@@ -40,23 +37,18 @@ export default class Menu {
             switch (opcao) {
                 case 1:
                     console.log('\n\n🔍 Listando todos os serviços...\n\n');
-
                     break;
                 case 2:
                     console.log('\n\n🔎 Buscando serviço pelo ID...\n\n');
-           
                     break;
                 case 3:
                     console.log('\n\n✏️  Cadastrando novo serviço...\n\n');
-                 
                     break;
                 case 4:
                     console.log('\n\n♻️  Atualizando serviço...\n\n');
-                  
                     break;
                 case 5:
                     console.log('\n\n🗑️  Deletando serviço...\n\n');
-                 
                     break;
                 default:
                     console.log('\n\n❌ Opção inválida! Tente novamente.\n\n');
@@ -81,3 +73,12 @@ export default class Menu {
         readlinesync.prompt();
     }
 }
+
+// Função principal que inicializa o menu
+export function main() {
+    const menu = new CloudShopMenu();
+    menu.exibirMenu();
+}
+
+// Chamada da função principal
+main();
